@@ -139,3 +139,24 @@ header .header-logo{
 	width: 20px;
 	margin: 10px auto;
 }
+
+/*-------------------------
+	.calendar-table
+-------------------------*/
+
+.calendar-table{
+	width: 91%; /*td width 13%*/
+	margin:0 auto;
+	margin-top:20px;
+	border:1px solid #bbb;
+}
+
+table tr td{
+	width: 13%
+	height:10px;
+}
+
+.red{
+	background-color: #ccc;
+}
+

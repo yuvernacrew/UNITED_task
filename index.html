@@ -2,8 +2,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>タスク</title>
+		<title>UNITED TASK</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="js/jquery-3.0.0.min.js"></script>
+		<script src="js/calendar.js"></script>
 	</head>
 <body>
 	<header>
@@ -24,6 +26,13 @@
 						</select> 
 				</div>
 				<div>
+					<p>PLAN<span>:</span></p>
+						<select name="name">
+							<option value="runba">予定</option>
+							<option value="runba">実行</option>
+						</select> 
+				</div>
+				<div>
 					<p>TITLE<span>:</span></p> 
 					<input type="text" name="MSG" size=30>
 				</div>
@@ -39,7 +48,7 @@
 			</div>
 			<div class="detail-box">
 				<p>DETAIL<span>:</span></p>
-				<textarea name="kanso" rows="5"></textarea><br>
+				<textarea name="kanso" rows="7"></textarea><br>
 			</div>
 		</div>
 		<div class="post-btn">
@@ -47,7 +56,10 @@
 		</div>
 	</div>
 	<!-- ▲ submit-container -->
+	<!-- ▼ calendar-table -->
+	<div class="calendar-table"></div>
 
-	
+
+
 </body>
 </html>
