@@ -146,17 +146,60 @@ header .header-logo{
 
 .calendar-table{
 	width: 91%; /*td width 13%*/
-	margin:0 auto;
-	margin-top:20px;
+	margin:20px auto;
 	border:1px solid #bbb;
 }
 
-table tr td{
-	width: 13%
-	height:10px;
+.calendar-table table{
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom:20px;
 }
 
+.calendar-table tr{
+	width: 100%;
+}
+
+.calendar-table p{
+	width: 20%;
+	text-align: center;
+	margin: 10px auto;
+}
+
+.calendar-table tr td{
+	width: 200px;
+	height:100px;
+	box-sizing: border-box;
+	padding:10px;
+	border:1px solid #ddd;
+}
+
+.calendar-table .week-name td{
+	height:0px !important;
+}
+
+.line td:first-child{
+	color: #f19544;
+}
+
+.line td:last-child{
+	color: #61b5e0;
+}
+
+
 .red{
-	background-color: #ccc;
+	background-color: #f19544;
+}
+
+.blue{
+	background-color: #61b5e0;
+}
+
+.text-red{
+	color: #e44820;
+}
+
+.text-blue{
+	color: #185daa;
 }
 

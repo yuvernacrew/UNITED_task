@@ -6,6 +6,9 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script src="js/jquery-3.0.0.min.js"></script>
 		<script src="js/calendar.js"></script>
+		<script src="https://cdn.mlkcca.com/v0.6.0/milkcocoa.js"></script>
+		<script src="js/data.js"></script>
+
 	</head>
 <body>
 	<header>
@@ -13,47 +16,49 @@
 	</header>
 	<!-- ▼ submit-container -->
 	<div class="submit-container">
-		<div class="input-box clearfix">
-			<div class="user-box">
-				<div>
-					<p>NAME<span>:</span></p>
-						<select name="name">
-							<option value="runba">るんば</option>
-							<option value="cheese">ちーず</option>
-							<option value="ciel">しえる</option>
-							<option value="jobs">ジョブズ</option>
-							<option value="wranai">だぶらない</option>
-						</select> 
-				</div>
-				<div>
-					<p>PLAN<span>:</span></p>
-						<select name="name">
-							<option value="runba">予定</option>
-							<option value="runba">実行</option>
-						</select> 
-				</div>
-				<div>
-					<p>TITLE<span>:</span></p> 
-					<input type="text" name="MSG" size=30>
-				</div>
-				<div>
-				<p>START<span>:</span></p>
-					<input type="date" name= "date">
-				</div>
+		<form method="post">
+			<div class="input-box clearfix">
+				<div class="user-box">
+					<div>
+						<p>NAME<span>:</span></p>
+							<select name="name" id="name">
+								<option value="runba">るんば</option>
+								<option value="cheese">ちーず</option>
+								<option value="ciel">しえる</option>
+								<option value="jobs">ジョブズ</option>
+								<option value="wranai">だぶらない</option>
+							</select> 
+					</div>
+					<div>
+						<p>PLAN<span>:</span></p>
+							<select name="plan" id="plan">
+								<option value="plan">予定</option>
+								<option value="ran">実行</option>
+							</select> 
+					</div>
+					<div>
+						<p>TITLE<span>:</span></p> 
+						<input type="text" id="msg" name="MSG" size=30>
+					</div>
+					<div>
+					<p>START<span>:</span></p>
+						<input type="date" id="dateStart" name= "dateStart">
+					</div>
 
-				<div>
-					<p>END<span>:</span></p>
-					<input type="date" name= "date">
+					<div>
+						<p>END<span>:</span></p>
+						<input type="date" id="dateEnd" name= "dateEnd">
+					</div>
+				</div>
+				<div class="detail-box">
+					<p>DETAIL<span>:</span></p>
+					<textarea name="kanso" rows="7" id="detail"></textarea><br>
 				</div>
 			</div>
-			<div class="detail-box">
-				<p>DETAIL<span>:</span></p>
-				<textarea name="kanso" rows="7"></textarea><br>
+			<div class="post-btn">
+				<input id="pstBtn" type="submit" value="  送信  ">
 			</div>
-		</div>
-		<div class="post-btn">
-			<input type="submit" value="  送信  ">
-		</div>
+		</form>
 	</div>
 	<!-- ▲ submit-container -->
 	<!-- ▼ calendar-table -->

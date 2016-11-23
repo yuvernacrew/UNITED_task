@@ -23,10 +23,12 @@ $(function(){
 	// ***********************	
 	//      カレンダーの表示	
 	// ***********************	
-	$('.calendar-table').append("<strong>",myYear, "年", (myMonth+1), "月カレンダー</strong>");
-	$('.calendar-table').append("<table></table>");
+
+	myMonth = myMonth + 1
+	$('.calendar-table').append("<p>"+myYear+"年"+ myMonth+ "月</p>");
+	$('.calendar-table').append("<table colups=3></table>");
 	$('.calendar-table').find('table').addClass('table');
-	$('.calendar-table').find('table').append('<tr>').addClass('cal-tit');//見出し
+	$('.calendar-table').find('table').append('<tr class="week-name">');//見出し
 	for(i=0; i<7; i++){
 		$('.calendar-table').find('table').find('tr').append('<td class="week'+i+'">'+myWeekTbl[i]+'</td>');
 		if(i==0){
@@ -38,22 +40,10 @@ $(function(){
 	}
 
 	for(i=0; i<myTblLine; i++){
-		$('.calendar-table').find('table').append('<tr class="line'+i+'">').addClass('cal-num');//見出し
+		$('.calendar-table').find('table').append('<tr class="line line'+i+'">').addClass('cal-num');//見出し
 		for(j=0; j<7; j++){
 			var myDat = myTable[j+(i*7)];
-			$('.line'+i).append('<td>'+myDat+'</td>');
-
-
-			// $('.calendar-table').find('table').find('<tr>').append('<td>');
-
-
-			// document.write("<td align='center' ");	// 列(セル)の作成
-			// myDat = myTable[j+(i*7)];	// 書きこむ内容の取得
-			// if (myDat==myToday)document.write("bgcolor='#00ffff'>");	// 今日のセルの色
-			// else if(j==0) document.write("bgcolor='#ffb6c1'>");	// 日曜のセルの色
-			// else document.write("bgcolor='#ffffe0'>");	// 平日のセルの色
-			// document.write("<strong>",myDat,"</strong>");	// 日付セット
-			// document.write("</td>")
+			$('.line'+i).append('<td class="month'+myMonth+'-data'+myDat+'">'+myDat+'</td>');
 		}
 	}
 });
