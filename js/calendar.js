@@ -13,17 +13,20 @@ $(function(){
 	myDate.setDate(1);	// 日付を'１日'に変えて、
 	var myWeek = myDate.getDay();	// 　'１日'の曜日を取得
 
-	var myTblLine = Math.ceil((myWeek+myMonthTbl[myMonth])/7);	// カレンダーの行数
-	var myTable = new Array(7*myTblLine);	// 表のセル数分定義
-	var myDat;
+	var myTblLine,myTable,myDat;
 
 	CreateDate();
 	CreateCalendar();
 
-	$('#pre-btn').click(function(){
-		console.log('もどるよ！');
+	$(document).on('click','#pre-btn',function(){
+		if(myMonth<2){
+			myMonth = 13;
+			myYear = myYear - 1;
+		}
+
 		myMonth = myMonth - 2;
 		myWeek = (myWeek - myMonthTbl[myMonth] + 70 ) % 7;
+
 		$(".calendar-month").remove();
 		$("table").remove();
 
@@ -31,9 +34,18 @@ $(function(){
 		CreateCalendar();
 	});
 
-	$('#next-btn').click(function(){
-		console.log('すすむよ！');
-		myWeek = (myWeek + myMonthTbl[myMonth-1]) % 7;
+	$(document).on('click','#next-btn',function(){
+		if(myMonth>=12){
+			myMonth = 0;
+			myYear = myYear + 1;
+		}
+
+		if(myMonth==0){
+			myWeek = (myWeek + myMonthTbl[11]) % 7;
+		}else{
+			myWeek = (myWeek + myMonthTbl[myMonth-1]) % 7;
+		}
+
 		$(".calendar-month").remove();
 		$("table").remove();
 
@@ -43,10 +55,8 @@ $(function(){
 
 
 	function CreateDate(){
-
 		myTblLine = Math.ceil((myWeek+myMonthTbl[myMonth])/7);	// カレンダーの行数
 		myTable = new Array(7*myTblLine);	// 表のセル数分定義
-		 	
 		for(i=0; i<7*myTblLine; i++){
 			myTable[i] = "　";	// myTableを掃除する
 		}
@@ -84,6 +94,5 @@ $(function(){
 			}
 		}
 	}
-
 });
 
