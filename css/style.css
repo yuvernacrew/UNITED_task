@@ -144,62 +144,84 @@ header .header-logo{
 	.calendar-table
 -------------------------*/
 
-.calendar-table{
-	width: 91%; /*td width 13%*/
-	margin:20px auto;
-	border:1px solid #bbb;
+.calendar-table {
+	width: 91%;
+	margin: 20px auto;
 }
 
-.calendar-table table{
+.calendar-month {
+	width: 30%;
+	margin-left:35%;
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+.month-btn {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 20%;
+	text-align: center;
+	border-radius: 4px;
+	border:1px solid #ddd;
+}
+
+.calendar-table p {
+	display: inline-block;
+	width: 60%;
+	text-align: center;
+}
+
+.calendar-table table {
 	width: 90%;
 	margin: 0 auto;
+	font-size: 80%;
 	margin-bottom:20px;
 }
 
-.calendar-table tr{
+.calendar-table tr {
 	width: 100%;
 }
 
-.calendar-table p{
-	width: 20%;
-	text-align: center;
-	margin: 10px auto;
-}
 
-.calendar-table tr td{
+.calendar-table tr td {
 	width: 200px;
 	height:100px;
 	box-sizing: border-box;
 	padding:10px;
-	border:1px solid #ddd;
+	border:1px solid #aaa;
 }
 
-.calendar-table .week-name td{
+.calendar-table .week-name {
+	background-color: #ddd;
+}
+
+
+.calendar-table .week-name td {
 	height:0px !important;
 }
 
-.line td:first-child{
+.line td:first-child {
+	color: #e44820 !important;  
+}
+
+.line td:last-child {
+	color: #185daa !important;
+}
+
+
+.red {
+	background-color: #e44820  !important;
+}
+
+.blue {
+	background-color: #185daa  !important;
+}
+
+.text-red {
 	color: #f19544;
 }
 
-.line td:last-child{
+.text-blue {
 	color: #61b5e0;
-}
-
-
-.red{
-	background-color: #f19544;
-}
-
-.blue{
-	background-color: #61b5e0;
-}
-
-.text-red{
-	color: #e44820;
-}
-
-.text-blue{
-	color: #185daa;
 }
 

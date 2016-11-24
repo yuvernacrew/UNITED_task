@@ -26,7 +26,6 @@ $(function(){
 	ds.stream().sort('desc').next(function(err, data) {
 
     for(var i=0;i<data.length;i++){
-    	console.log(data[i].value.name);
     	var name = data[i].value.name;
     	var plan = data[i].value.plan;
     	var msg = data[i].value.msg;
