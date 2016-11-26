@@ -23,48 +23,57 @@ $(function(){
 		});
 	});
 
-	ds.stream().sort('desc').next(function(err, data) {
+	data();
 
-    for(var i=0;i<data.length;i++){
-    	var name = data[i].value.name;
-    	var plan = data[i].value.plan;
-    	var msg = data[i].value.msg;
+    $(document).on('click','#next-btn',function(){
+        data();
+    });
+    $(document).on('click','#pre-btn',function(){
+        data();
+    });
 
-    	var dsm1 = data[i].value.date1.slice(5,7);
-    	var dsd1 = data[i].value.date1.slice(8,10);
-    	var dsm2 = data[i].value.date2.slice(5,7);
-    	var dsd2 = data[i].value.date2.slice(8,10);
+    function data(){
+        ds.stream().sort('desc').next(function(err, data) {
 
-    	if(dsm1.charAt(0)=='0'){
-    		dsm1 = dsm1.substr(1);
-    	}
+            for(var i=0;i<data.length;i++){
 
-    	if(dsd1.charAt(0)=='0'){
-    		dsd1 = dsd1.substr(1);
-    	}
+            	var name = data[i].value.name;
+            	var plan = data[i].value.plan;
+            	var msg = data[i].value.msg;
 
-    	if(dsm2.charAt(0)=='0'){
-    		dsm2 = dsm2.substr(1);
-    	}
+            	var dsm1 = data[i].value.date1.slice(5,7);
+            	var dsd1 = data[i].value.date1.slice(8,10);
+            	var dsm2 = data[i].value.date2.slice(5,7);
+            	var dsd2 = data[i].value.date2.slice(8,10);
 
-    	if(dsd2.charAt(0)=='0'){
-    		dsd2 = dsd2.substr(1);
-    	}
+            	if(dsm1.charAt(0)=='0'){
+            		dsm1 = dsm1.substr(1);
+            	}
 
-    	if(plan=='plan'){
-    		$('.month'+dsm1+'-data'+dsd1).append('<article class="text-red">'+name+'は'+msg+' を実行する予定です</article>');
-    		$('.month'+dsm2+'-data'+dsd2).append('<article class="text-red">'+name+'は'+msg+' を終了する予定です</article>');
-    	}
-    	if(plan=='ran'){
-    		$('.month'+dsm1+'-data'+dsd1).append('<article class="text-blue">'+name+'は'+msg+' を実行しました</article>');
-    		$('.month'+dsm2+'-data'+dsd2).append('<article class="text-blue">'+name+'は'+msg+' を終了しました</article>');
+            	if(dsd1.charAt(0)=='0'){
+            		dsd1 = dsd1.substr(1);
+            	}
 
-    	}
+            	if(dsm2.charAt(0)=='0'){
+            		dsm2 = dsm2.substr(1);
+            	}
 
-    }
+            	if(dsd2.charAt(0)=='0'){
+            		dsd2 = dsd2.substr(1);
+            	}
 
-	});
+            	if(plan=='plan'){
+            		$('.month'+dsm1+'-data'+dsd1).append('<article class="text-red">'+name+'は'+msg+' を実行する予定です</article>');
+            		$('.month'+dsm2+'-data'+dsd2).append('<article class="text-red">'+name+'は'+msg+' を終了する予定です</article>');
+            	}
 
+            	if(plan=='ran'){
+            		$('.month'+dsm1+'-data'+dsd1).append('<article class="text-blue">'+name+'は'+msg+' を実行しました</article>');
+            		$('.month'+dsm2+'-data'+dsd2).append('<article class="text-blue">'+name+'は'+msg+' を終了しました</article>');
+            	}
+            }
+        });
+	};
 });
 
 
