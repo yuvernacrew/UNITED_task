@@ -217,7 +217,11 @@ header .header-logo{
 	background-color: #185daa  !important;
 }
 
-.text-red {
+.text-red{
+	color: red;
+}
+
+.text-orange {
 	color: #f19544;
 }
 
@@ -225,3 +229,6 @@ header .header-logo{
 	color: #61b5e0;
 }
 
+.text-white{
+	color: white;
+}

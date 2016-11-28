@@ -2,10 +2,14 @@ $(function(){
 	var myDate = new Date();
 	var myWeekTbl = new Array("日","月","火","水","木","金","土");
 	var myMonthTbl= new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+	var holidayMonth = new Array(1,1,2,3,3,4,5,5,5,7,8,9,9,10,11,11,12);
+	var holidayDate = new Array(1,11,11,20,21,29,3,4,5,18,11,19,22,10,03,23,23);
 	var myYear = myDate.getFullYear();//2016
 	if (((myYear%4)==0 && (myYear%100)!=0) || (myYear%400)==0){
 		myMonthTbl[1] = 29;
-	}	
+	}
+	console.log(holidayMonth.length);
+	console.log(holidayDate.length);
 
 	var myMonth = myDate.getMonth();
 	var myToday = myDate.getDate();	// 今日の'日'を退避
@@ -79,10 +83,10 @@ $(function(){
 		for(i=0; i<7; i++){
 			$('.calendar-table').find('table').find('tr').append('<td class="week'+i+'">'+myWeekTbl[i]+'</td>');
 			if(i==0){
-				$('.calendar-table').find('table').find('tr').find('.week0').addClass('red');
+				$('.calendar-table').find('table').find('tr').find('.week0').addClass('red text-white');
 			}
 			if(i==6){
-				$('.calendar-table').find('table').find('tr').find('.week6').addClass('blue');
+				$('.calendar-table').find('table').find('tr').find('.week6').addClass('blue text-white');
 			}
 		}
 
@@ -91,6 +95,12 @@ $(function(){
 			for(j=0; j<7; j++){
 				myDat = myTable[j+(i*7)];
 				$('.line'+i).append('<td class="month'+myMonth+'-data'+myDat+'">'+myDat+'</td>');
+			}
+		}
+
+		for(i=0; i<holidayMonth.length ;i++){
+			if(myMonth == holidayMonth[i]){
+				$('.month'+myMonth+'-data'+holidayDate[i]).addClass('text-red')
 			}
 		}
 	}
