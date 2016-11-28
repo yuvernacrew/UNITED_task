@@ -92,15 +92,20 @@ $(function(){
 
 		for(i=0; i<myTblLine; i++){
 			$('.calendar-table').find('table').append('<tr class="line line'+i+'">').addClass('cal-num');//見出し
+
 			for(j=0; j<7; j++){
 				myDat = myTable[j+(i*7)];
 				$('.line'+i).append('<td class="month'+myMonth+'-data'+myDat+'">'+myDat+'</td>');
+			}
+
+			if(i == 5){
+				$('table td').css('height','12.5vh');
 			}
 		}
 
 		for(i=0; i<holidayMonth.length ;i++){
 			if(myMonth == holidayMonth[i]){
-				$('.month'+myMonth+'-data'+holidayDate[i]).addClass('text-red')
+				$('.month'+myMonth+'-data'+holidayDate[i]).addClass('text-red');
 			}
 		}
 	}

@@ -48,6 +48,14 @@ table {
 	border-spacing: 0;
 }
 
+body{
+	background-color: #f7f4f0;
+	color: #34322f;
+	font-family: Arial, Roboto, "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+	overflow: hidden;
+}
+
+
 /*-------------------------
 	clearfix
 -------------------------*/
@@ -77,19 +85,20 @@ table {
 	header
 -------------------------*/
 header{
-	width: 100%;
-}
-
-header .header-logo{
-	width: 10%;
-	margin-left:45%;
-
+	width: 100vw;
+	height: 60px;
+	margin-bottom: 20px;
+	background-image: url('../images/united-logo.png');
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-position: center 5px;
 }
 
 /*-------------------------
 	.submit-container
 -------------------------*/
 .submit-container{
+	display: none;
 	box-sizing: border-box;
 	width: 80vw;
 	margin: 0 auto;
@@ -144,11 +153,6 @@ header .header-logo{
 	.calendar-table
 -------------------------*/
 
-.calendar-table {
-	width: 91%;
-	margin: 20px auto;
-}
-
 .calendar-month {
 	width: 30%;
 	margin-left:35%;
@@ -172,7 +176,7 @@ header .header-logo{
 }
 
 .calendar-table table {
-	width: 90%;
+	width: 91vw;
 	margin: 0 auto;
 	font-size: 80%;
 	margin-bottom:20px;
@@ -184,11 +188,11 @@ header .header-logo{
 
 
 .calendar-table tr td {
-	width: 200px;
-	height:100px;
+	width: 13vw;
+	height: 15vh;
 	box-sizing: border-box;
 	padding:10px;
-	border:1px solid #aaa;
+	border:1px solid #bbb;
 }
 
 .calendar-table .week-name {
@@ -210,15 +214,15 @@ header .header-logo{
 
 
 .red {
-	background-color: #e44820  !important;
+	background-color: #d71b18  !important;
 }
 
 .blue {
-	background-color: #185daa  !important;
+	background-color: #0b396f  !important;
 }
 
 .text-red{
-	color: red;
+	color: #d71b18;
 }
 
 .text-orange {
