@@ -84,7 +84,7 @@ body{
 /*-------------------------
 	header
 -------------------------*/
-header{
+.header{
 	width: 100vw;
 	height: 60px;
 	margin-bottom: 20px;
@@ -94,10 +94,35 @@ header{
 	background-position: center 5px;
 }
 
+.header-continer{
+	width: 90vw;
+	height: 60px;
+	margin-left: 5vw;
+}
+
+.header-btn{
+	box-sizing: border-box;
+	width: 150px;
+	height: 46px;
+	background-color: #f19544;
+	border-radius: 5px;
+	color: white;
+	text-align: center;
+	line-height: 46px;
+	margin-top: 20px; 
+}
+
+.member-btn{
+	float: left;
+}
+
+.task-btn{
+	float: right;
+}
 /*-------------------------
 	.submit-container
 -------------------------*/
-.submit-container{
+/*.submit-container{
 	display: none;
 	box-sizing: border-box;
 	width: 80vw;
@@ -147,7 +172,7 @@ header{
 .submit-container .post-btn{
 	width: 20px;
 	margin: 10px auto;
-}
+}*/
 
 /*-------------------------
 	.calendar-table
