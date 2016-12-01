@@ -1,14 +1,20 @@
 $(function(){
+	var taskOpen = false;
 	$('.js-task-btn').on('click',function(){
 		$('.submit-container').css('display','block');
-		$('.calendar-table').css('width','75vw');
-		$('.table').css('width','70vw');
+		$('.submit-container').animate({width:'25vw'},500);
+		taskOpen = true;
+		CalendarSizing();
 	});
 
 	$('.js-close-icon').on('click',function(){
-		$('.submit-container').css('display','none');
-		$('.calendar-table').css('width','100vw');
-		$('.table').css('width','91vw');
+		$('.submit-container').animate({
+			width: 0,
+			display: 'none'
+		},500);
+		taskOpen = false;
+		CalendarSizing();
+
 	})
 
 
@@ -49,6 +55,7 @@ $(function(){
 
 		CreateDate();
 		CreateCalendar();
+		CalendarSizing();
 	});
 
 	$(document).on('click','#next-btn',function(){
@@ -68,7 +75,18 @@ $(function(){
 
 		CreateDate();
 		CreateCalendar();
+		CalendarSizing();
 	});
+
+	function CalendarSizing(){
+		if(taskOpen==true){
+			$('.calendar-table').animate({width:"75vw"},500);
+			$('.table').animate({width:"70vw"},500);
+		}else{
+			$('.calendar-table').animate({width:"100vw"},500);
+			$('.table').animate({width:"91vw"},500);
+		}
+	}
 
 
 	function CreateDate(){

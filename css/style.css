@@ -129,7 +129,7 @@ body{
 	display: none;
 	position: absolute;
 	box-sizing: border-box;
-	width: 25vw;
+	width: 0;
 	height: 100vh;
 	right: 0;
 	top: 0;
@@ -181,6 +181,7 @@ body{
 	text-align: center;
 	border-radius: 4px;
 	border:1px solid #ddd;
+	background-color: #eee;
 	cursor: pointer;
 }
 
