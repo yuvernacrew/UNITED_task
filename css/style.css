@@ -102,7 +102,8 @@ body{
 
 .header-btn{
 	box-sizing: border-box;
-	width: 150px;
+	width: 10vw;
+	min-width:70px;
 	height: 46px;
 	background-color: #f19544;
 	border-radius: 5px;
@@ -110,6 +111,7 @@ body{
 	text-align: center;
 	line-height: 46px;
 	margin-top: 20px; 
+	cursor: pointer;
 }
 
 .member-btn{
@@ -119,60 +121,47 @@ body{
 .task-btn{
 	float: right;
 }
+
 /*-------------------------
 	.submit-container
 -------------------------*/
-/*.submit-container{
+.submit-container{
 	display: none;
+	position: absolute;
 	box-sizing: border-box;
-	width: 80vw;
-	margin: 0 auto;
-	margin-top: 20px;
-	border-radius: 4px;
-	border:1px solid #9fca37;
+	width: 25vw;
+	height: 100vh;
+	right: 0;
+	top: 0;
+	background-color: #ddd;
 }
 
-
-.submit-container .input-box{
-	width: 100%;
+.close-icon{
+	position: relative;
+	top: 10px;
+	left: 10px;
+	font-size: 24px;
+	cursor: pointer;
 }
 
-.user-box{
-	float: left;
-	width: 40%;
-	margin-left: 15px;
-	margin-top:10px;
+.submit-form{
+	margin-left: 2vw; 
+	margin-top: 3vh;
 }
 
-.detail-box{
-	float: right;
-	width: 40%;
-	margin-right: 15px;
-	margin-top:10px;
-
+.submit-contain{
+	margin-bottom: 20px;
 }
 
-.detail-box textarea{
-	width: 90%;
-	height: 100%;
+.submit-contain p{
+	margin-bottom: 3px;
 }
 
-.submit-container .user-box p{
-	display: inline-block;
-	width: 30%;
-	margin:5px 0px 5px 20px;
+.submit-contain input,
+.submit-contain textarea{
+	width: 80%;
 }
 
-.submit-container .detail-box p{
-	width: 30%;
-	margin:5px 0px 5px 0px;
-}
-
-
-.submit-container .post-btn{
-	width: 20px;
-	margin: 10px auto;
-}*/
 
 /*-------------------------
 	.calendar-table
@@ -192,6 +181,7 @@ body{
 	text-align: center;
 	border-radius: 4px;
 	border:1px solid #ddd;
+	cursor: pointer;
 }
 
 .calendar-table p {

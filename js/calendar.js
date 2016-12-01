@@ -1,4 +1,17 @@
 $(function(){
+	$('.js-task-btn').on('click',function(){
+		$('.submit-container').css('display','block');
+		$('.calendar-table').css('width','75vw');
+		$('.table').css('width','70vw');
+	});
+
+	$('.js-close-icon').on('click',function(){
+		$('.submit-container').css('display','none');
+		$('.calendar-table').css('width','100vw');
+		$('.table').css('width','91vw');
+	})
+
+
 	var myDate = new Date();
 	var myWeekTbl = new Array("日","月","火","水","木","金","土");
 	var myMonthTbl= new Array(31,28,31,30,31,30,31,31,30,31,30,31);
