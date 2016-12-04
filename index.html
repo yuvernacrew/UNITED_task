@@ -17,12 +17,12 @@
 			<div class="header-btn task-btn js-task-btn">task</div>
 		</div>
 	</header>
-	<!-- ▼ submit-container -->
-	<div class="submit-container">
+	<!-- ▼ form-container -->
+	<div class="form-container">
 		<span class="js-close-icon close-icon">×</span>
-		<form class="submit-form" method="post">
+		<form class="form" method="post">
 			<div class="input-box clearfix">
-				<div class="submit-contain">
+				<div class="form-contain">
 					<p>NAME<span>:</span></p>
 						<select name="name" id="name">
 							<option value="るんば">るんば</option>
@@ -32,26 +32,26 @@
 							<option value="だぶらない">だぶらない</option>
 						</select> 
 				</div>
-				<div class="submit-contain">
+				<div class="form-contain">
 					<p>PLAN<span>:</span></p>
 						<select name="plan" id="plan">
 							<option value="plan">予定</option>
 							<option value="ran">実行</option>
 						</select> 
 				</div>
-				<div class="submit-contain">
+				<div class="form-contain">
 					<p>TITLE<span>:</span></p> 
 					<input type="text" id="msg" name="MSG">
 				</div>
-				<div class="submit-contain">
+				<div class="form-contain">
 				<p>START<span>:</span></p>
 					<input type="date" id="dateStart" name= "dateStart">
 				</div>
-				<div class="submit-contain">
+				<div class="form-contain">
 					<p>END<span>:</span></p>
 					<input type="date" id="dateEnd" name= "dateEnd">
 				</div>
-				<div class="submit-contain">
+				<div class="form-contain">
 					<p>DETAIL<span>:</span></p>
 					<textarea name="detail" rows="7" id="detail"></textarea><br>
 				</div>
@@ -61,11 +61,12 @@
 			</div>
 		</form>
 	</div>
-	<!-- ▲ submit-container -->
+	<!-- ▲ form-container -->
 	<!-- ▼ calendar-table -->
-	<div class="calendar-table"></div>
-
-
+	<div class="calendar-container">
+		<div class="calendar-month clearfix"></div>
+		<table class="calender-table" colups = 3></table>
+	</div>
 
 </body>
 </html>

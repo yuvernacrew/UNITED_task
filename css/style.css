@@ -38,8 +38,8 @@ ol, ul {
 blockquote, q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote: before, blockquote: after,
+q: before, q: after {
 	content: '';
 	content: none;
 }
@@ -48,7 +48,7 @@ table {
 	border-spacing: 0;
 }
 
-body{
+body {
 	background-color: #f7f4f0;
 	color: #34322f;
 	font-family: Arial, Roboto, "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
@@ -60,7 +60,7 @@ body{
 	clearfix
 -------------------------*/
 
-.clearfix:after {
+.clearfix: after {
 	content: "";
 	display: block;
 	height: 0;
@@ -84,26 +84,26 @@ body{
 /*-------------------------
 	header
 -------------------------*/
-.header{
+.header {
 	width: 100vw;
 	height: 60px;
 	margin-bottom: 20px;
 	background-image: url('../images/united-logo.png');
-	background-size:contain;
+	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center 5px;
 }
 
-.header-continer{
+.header-continer {
 	width: 90vw;
 	height: 60px;
 	margin-left: 5vw;
 }
 
-.header-btn{
+.header-btn {
 	box-sizing: border-box;
 	width: 10vw;
-	min-width:70px;
+	min-width: 70px;
 	height: 46px;
 	background-color: #f19544;
 	border-radius: 5px;
@@ -114,18 +114,18 @@ body{
 	cursor: pointer;
 }
 
-.member-btn{
+.member-btn {
 	float: left;
 }
 
-.task-btn{
+.task-btn {
 	float: right;
 }
 
 /*-------------------------
-	.submit-container
+	.form-container
 -------------------------*/
-.submit-container{
+.form-container {
 	display: none;
 	position: absolute;
 	box-sizing: border-box;
@@ -136,7 +136,7 @@ body{
 	background-color: #ddd;
 }
 
-.close-icon{
+.close-icon {
 	position: relative;
 	top: 10px;
 	left: 10px;
@@ -144,32 +144,32 @@ body{
 	cursor: pointer;
 }
 
-.submit-form{
+.form {
 	margin-left: 2vw; 
 	margin-top: 3vh;
 }
 
-.submit-contain{
+.form-contain {
 	margin-bottom: 20px;
 }
 
-.submit-contain p{
+.form-contain p {
 	margin-bottom: 3px;
 }
 
-.submit-contain input,
-.submit-contain textarea{
+.form-contain input,
+.form-contain textarea {
 	width: 80%;
 }
 
 
 /*-------------------------
-	.calendar-table
+	.calendar-container
 -------------------------*/
 
 .calendar-month {
 	width: 30%;
-	margin-left:35%;
+	margin-left: 35%;
 	margin-bottom: 20px;
 	display: inline-block;
 }
@@ -180,68 +180,68 @@ body{
 	width: 20%;
 	text-align: center;
 	border-radius: 4px;
-	border:1px solid #ddd;
+	border: 1px solid #ddd;
 	background-color: #eee;
 	cursor: pointer;
 }
 
-.calendar-table p {
+.calendar-container p {
 	display: inline-block;
 	width: 60%;
 	text-align: center;
 }
 
-.calendar-table table {
+.calendar-container table {
 	width: 91vw;
 	margin: 0 auto;
 	font-size: 80%;
-	margin-bottom:20px;
+	margin-bottom: 20px;
 }
 
-.calendar-table tr {
+.calendar-container tr {
 	width: 100%;
 }
 
 
-.calendar-table tr td {
+.calendar-container tr td {
 	width: 13vw;
 	height: 15vh;
 	box-sizing: border-box;
-	padding:10px;
-	border:1px solid #bbb;
+	padding: 10px;
+	border: 1px solid #bbb;
 }
 
-.calendar-table .week-name {
+.calendar-container .week-name {
 	background-color: #ddd;
 }
 
 
-.calendar-table .week-name td {
-	height:0px !important;
+.calendar-container .week-name td {
+	height: 0px !important;
 	text-align: center;
 }
 
-.line td:first-child {
+.line td: first-child {
 	color: #e44820 !important;  
 }
 
-.line td:last-child {
+.line td: last-child {
 	color: #185daa !important;
 }
 
-.calendar-list{
+.calendar-list {
 	margin-top: 5px;
 }
 
 .red {
-	background-color: #d71b18  !important;
+	background-color: #d71b18 !important;
 }
 
 .blue {
-	background-color: #0b396f  !important;
+	background-color: #0b396f !important;
 }
 
-.text-red{
+.text-red {
 	color: #d71b18;
 }
 
@@ -253,6 +253,6 @@ body{
 	color: #61b5e0;
 }
 
-.text-white{
+.text-white {
 	color: white;
 }

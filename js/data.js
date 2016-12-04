@@ -35,7 +35,7 @@ $(function(){
   function data(){
     ds.stream().next(function(err, data) {
 
-      for(var i=0;i<data.length;i++){
+      for(var i = 0;i < data.length; i++){
 
         var name = data[i].value.name;
         var plan = data[i].value.plan;
@@ -46,30 +46,30 @@ $(function(){
         var dsm2 = data[i].value.date2.slice(5,7);
         var dsd2 = data[i].value.date2.slice(8,10);
 
-        if(dsm1.charAt(0)=='0'){
+        if(dsm1.charAt(0) == '0'){
             dsm1 = dsm1.substr(1);
         }
 
-        if(dsd1.charAt(0)=='0'){
+        if(dsd1.charAt(0) == '0'){
             dsd1 = dsd1.substr(1);
         }
 
-        if(dsm2.charAt(0)=='0'){
+        if(dsm2.charAt(0) == '0'){
             dsm2 = dsm2.substr(1);
         }
 
-        if(dsd2.charAt(0)=='0'){
+        if(dsd2.charAt(0) == '0'){
             dsd2 = dsd2.substr(1);
         }
 
-        if(plan=='plan'){
-            $('.month'+dsm1+'-data'+dsd1).append('<article class="calendar-list text-orange">【実行予定】<br>'+name+'：'+msg+'</article>');
-            $('.month'+dsm2+'-data'+dsd2).append('<article class="calendar-list text-orange【終了予定】<br>'+name+'：'+msg+'</article>');
+        if(plan === 'plan'){
+            $('.month' + dsm1 + '-data' + dsd1).append('<article class="calendar-list text-orange">【実行予定】<br>' + name + '：' + msg + '</article>');
+            $('.month' + dsm2 + '-data' + dsd2).append('<article class="calendar-list text-orange【終了予定】<br>' + name + '：' + msg + '</article>');
         }
 
-        if(plan=='ran'){
-            $('.month'+dsm1+'-data'+dsd1).append('<article class="calendar-list text-blue">【実行】<br>'+name+'：'+msg+'</article>');
-            $('.month'+dsm2+'-data'+dsd2).append('<article class="calendar-list text-blue">【終了】<br>'+name+'：'+msg+'</article>');
+        if(plan === 'ran'){
+            $('.month' + dsm1 + '-data' + dsd1).append('<article class="calendar-list text-blue">【実行】<br>' + name + '：' + msg + '</article>');
+            $('.month' + dsm2 + '-data' + dsd2).append('<article class="calendar-list text-blue">【終了】<br>' + name + '：' + msg + '</article>');
         }
       }
     });
