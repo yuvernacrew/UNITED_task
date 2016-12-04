@@ -63,13 +63,13 @@ $(function(){
         }
 
         if(plan=='plan'){
-            $('.month'+dsm1+'-data'+dsd1).append('<article class="text-orange">'+name+'は'+msg+' を実行する予定です</article>');
-            $('.month'+dsm2+'-data'+dsd2).append('<article class="text-orange">'+name+'は'+msg+' を終了する予定です</article>');
+            $('.month'+dsm1+'-data'+dsd1).append('<article class="calendar-list text-orange">【実行予定】<br>'+name+'：'+msg+'</article>');
+            $('.month'+dsm2+'-data'+dsd2).append('<article class="calendar-list text-orange【終了予定】<br>'+name+'：'+msg+'</article>');
         }
 
         if(plan=='ran'){
-            $('.month'+dsm1+'-data'+dsd1).append('<article class="text-blue">'+name+'は'+msg+' を実行しました</article>');
-            $('.month'+dsm2+'-data'+dsd2).append('<article class="text-blue">'+name+'は'+msg+' を終了しました</article>');
+            $('.month'+dsm1+'-data'+dsd1).append('<article class="calendar-list text-blue">【実行】<br>'+name+'：'+msg+'</article>');
+            $('.month'+dsm2+'-data'+dsd2).append('<article class="calendar-list text-blue">【終了】<br>'+name+'：'+msg+'</article>');
         }
       }
     });

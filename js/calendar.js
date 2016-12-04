@@ -114,10 +114,10 @@ $(function(){
 		for(i=0; i<7; i++){
 			$('.calendar-table').find('table').find('tr').append('<td class="week'+i+'">'+myWeekTbl[i]+'</td>');
 			if(i==0){
-				$('.calendar-table').find('table').find('tr').find('.week0').addClass('red text-white');
+				$('.week0').addClass('red text-white');
 			}
 			if(i==6){
-				$('.calendar-table').find('table').find('tr').find('.week6').addClass('blue text-white');
+				$('.week6').addClass('blue text-white');
 			}
 		}
 

@@ -218,6 +218,7 @@ body{
 
 .calendar-table .week-name td {
 	height:0px !important;
+	text-align: center;
 }
 
 .line td:first-child {
@@ -228,6 +229,9 @@ body{
 	color: #185daa !important;
 }
 
+.calendar-list{
+	margin-top: 5px;
+}
 
 .red {
 	background-color: #d71b18  !important;
