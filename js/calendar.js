@@ -6,12 +6,12 @@ $(function(){
 	var $table = $(".calender-table");
 
 	var myDate = new Date();
-	var myWeekTbl = new Array("日","月","火","水","木","金","土");
-	var myMonthTbl = new Array(31,28,31,30,31,30,31,31,30,31,30,31);
-	var holidayMonth = new Array(1,1,2,3,3,4,5,5,5,7,8,9,9,10,11,11,12);
-	var holidayDate = new Array(1,11,11,20,21,29,3,4,5,18,11,19,22,10,03,23,23);
-	var myYear = myDate.getFullYear();//2016
-	if (((myYear%4) === 0 && (myYear%100)!=0) || (myYear%400) === 0){
+	var myWeekTbl = new Array("日",　"月",　"火",　"水", "木", "金", "土");
+	var myMonthTbl = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+	var holidayMonth = new Array(1, 1, 2, 3, 3, 4, 5, 5, 5, 7, 8, 9, 9, 10, 11, 11, 12);
+	var holidayDate = new Array(1, 11, 11, 20, 21, 29, 3, 4, 5, 18, 11, 19, 22, 10, 03, 23, 23);
+	var myYear = myDate.getFullYear();
+	if (((myYear % 4) === 0 && (myYear % 100) != 0) || (myYear % 400) === 0){
 		myMonthTbl[1] = 29;
 	}
 
@@ -20,7 +20,6 @@ $(function(){
 
 	myDate.setDate(1);	// 日付を"１日"に変えて、
 	var myWeek = myDate.getDay();	// 　"１日"の曜日を取得
-
 	var myTblLine, myTable, myDat;
 
 	createDate();
@@ -28,17 +27,17 @@ $(function(){
 
 	function sizingCalendar(){
 		if(taskOpen === true){
-			$calender.animate({width:"75vw"},500);
-			$table.animate({width:"70vw"},500);
+			$calender.animate({width : "75vw"}, 500);
+			$table.animate({width : "70vw"}, 500);
 		}else{
-			$calender.animate({width:"100vw"},500);
-			$table.animate({width:"91vw"},500);
+			$calender.animate({width : "100vw"}, 500);
+			$table.animate({width : "91vw"}, 500);
 		}
 	}
 
-
 	function createDate(){
-		myTblLine = Math.ceil((myWeek+myMonthTbl[myMonth])/7);	// カレンダーの行数
+		myTblLine = Math.ceil((myWeek + myMonthTbl[myMonth]) / 7);	// カレンダーの行数
+		console.log(myTblLine);
 		myTable = new Array(7 * myTblLine);	// 表のセル数分定義
 		for(var i = 0; i < 7 * myTblLine; i++){
 			myTable[i] = "　";	// myTableを掃除する
